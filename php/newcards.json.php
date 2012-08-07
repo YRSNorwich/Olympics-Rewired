@@ -1,6 +1,10 @@
 <?php
+require 'confidential_credentials.php';
+
 header("Content-Type: application/json");
-mysql_connect("localhost", "root", "") or die(mysql_error());
+
+// Need conditional thingaboob for when we get the proper server?
+mysql_connect($host,$user,$pass) or die(mysql_error());
 mysql_select_db("trump") or die(mysql_error());
 
 $result = mysql_query("SELECT * FROM cards ORDER BY RAND() LIMIT 2") or die(mysql_error());
