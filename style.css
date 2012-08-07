@@ -16,7 +16,7 @@ a:active {color:#FF0000;}
   font-family: 'Olympic Font';
   font-style: normal;
   font-weight: 400;
-  src: local('Olympic Font'), local('Olympic Font'), url(http://storage.benholloway.co.uk/fonts/olympicfonts.otf) format('woff');
+  src: local('Olympic Font'), local('Olympic Font'), url(http://storage.benholloway.co.uk/fonts/olympicfonts.otf) format('otf');
 }  
 
 header {
