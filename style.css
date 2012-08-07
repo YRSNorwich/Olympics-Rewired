@@ -12,12 +12,12 @@ a:active {color:#FF0000;}
 ::-moz-selection { background:#C7C7C7 color:#000000; }
 ::-webkit-selection { background:#C7C7C7; color:#000000; }
 
-/* @font-face {
+ @font-face {
   font-family: 'Olympic Font';
   font-style: normal;
   font-weight: 400;
   src: local('Olympic Font'), local('Olympic Font'), url(http://storage.benholloway.co.uk/fonts/olympicfonts.otf) format('otf');
-} */
+}  
 
 header {
 	width:100%;
@@ -114,5 +114,5 @@ footer {
 	background-color: #000;
 } 
 
-p.title		{padding:28px;font-size:2em;}
+p.title		{padding:28px;font-family: 'Olympic Font';}
 img.menu	{width:360px;height:300px;}
