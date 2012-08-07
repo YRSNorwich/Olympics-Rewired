@@ -79,7 +79,7 @@ header {
 	position:absolute;
 }
 
-#wrapper	{	/* container, d.n.m.w. */
+#wrapper	{	/* container for footer, d.n.m.w. */
 	width:100% !important;
 	height:125px;
 	bottom:0;
@@ -90,7 +90,7 @@ header {
 
 #card1	{	/* container, d.n.m.w. */
 	width:305px;
-	height:450px;
+	height:417px;
 	left:0;
 	border-radius:7px;
 	background-color:#77C4D3;
@@ -98,7 +98,7 @@ header {
 
 #card2	{	/* container, d.n.m.w. */
 	width:305px;
-	height:450px;
+	height:417px;
 	right:0;
 	border-radius:7px;
 	background-color:#77C4D3;
@@ -109,7 +109,7 @@ footer {
 	height:125px;
 	margin:0 auto;
 	display:inline-block !important;
-	background-color: #000;
+	/*background-color: #000;*/
 } 
 
 p.title		{padding:28px;font-size:2em;font-family: 'Source Sans Pro', sans-serif;}
@@ -142,7 +142,7 @@ section.image	{
 section.data	{
 	background-color:#DAEDE2;
 	width:245px;
-	height:182px;
+	height:150px;
 	margin-left:30px;
 	margin-top:5px;
 	-webkit-border-radius: 0px 0px 7px 7px;
@@ -154,5 +154,14 @@ ul.data	{
 	padding-top:30px;
 }
 
+p.question	{
+	font-size:17.5em;
+	color:#DAEDE2;
+	text-align:center;
+	padding-top:50px;
+}
 
+li {
+	margin-top:3px;
+}
 
