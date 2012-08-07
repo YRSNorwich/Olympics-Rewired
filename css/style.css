@@ -12,8 +12,6 @@ a:active {color:#FF0000;}
 ::-moz-selection { background:#C7C7C7 color:#000000; }
 ::-webkit-selection { background:#C7C7C7; color:#000000; }
 
-@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700);
-
 /*  @font-face {
   font-family: 'Olympic Font';
   font-style: normal;
@@ -64,7 +62,7 @@ header {
 	 position:relative;
 }
 
-#hand1	{
+#hand1	{		/* styling, the blue box!!!! */
 	width:335px;
 	height:520px;
 	float:left;
@@ -72,7 +70,7 @@ header {
 	position:absolute;
 }
 
-#hand2	{
+#hand2	{ 		/* styling, the blue box!!!! */
 	width:335px;
 	height:520px;
 	float:right;
@@ -81,7 +79,7 @@ header {
 	position:absolute;
 }
 
-#wrapper	{
+#wrapper	{	/* container, d.n.m.w. */
 	width:100% !important;
 	height:125px;
 	bottom:0;
@@ -90,22 +88,20 @@ header {
 	text-align: center;
 }
 
-#card1	{
+#card1	{	/* container, d.n.m.w. */
 	width:305px;
 	height:450px;
 	left:0;
-	border-radius:8px;
+	border-radius:7px;
 	background-color:#77C4D3;
-	padding:30px;
 }
 
-#card2	{
+#card2	{	/* container, d.n.m.w. */
 	width:305px;
 	height:450px;
 	right:0;
-	border-radius:8px;
+	border-radius:7px;
 	background-color:#77C4D3;
-	padding:30px;
 }
 
 footer {
@@ -116,5 +112,47 @@ footer {
 	background-color: #000;
 } 
 
-p.title		{padding:28px;}
+p.title		{padding:28px;font-size:2em;font-family: 'Source Sans Pro', sans-serif;}
 img.menu	{width:360px;height:300px;}
+
+section.title	{
+	text-align:center;
+	font-size:1.25em;
+	background-color:#DAEDE2;
+	-webkit-border-radius: 7px 7px 0px 0px;
+	border-radius: 7px 7px 0px 0px;
+	margin:auto;
+	margin-top:30px;
+	margin-left:15px;
+	width:245px;
+	margin-left:30px;
+	padding-top:8px;
+	padding-bottom:8px;
+}
+
+section.image	{
+	width:245px;
+	height:160px;
+	margin-left:30px;
+	margin-top:5px;
+	background-image:url('http://storage.benholloway.co.uk/img/am/am%20background.jpg');
+	background-size:100%;
+}
+
+section.data	{
+	background-color:#DAEDE2;
+	width:245px;
+	height:182px;
+	margin-left:30px;
+	margin-top:5px;
+	-webkit-border-radius: 0px 0px 7px 7px;
+	border-radius: 0px 0px 7px 7px;
+}
+
+ul.data	{
+	margin-left:30px;
+	padding-top:30px;
+}
+
+
+
