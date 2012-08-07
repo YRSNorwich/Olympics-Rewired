@@ -94,6 +94,8 @@ header {
 	left:0;
 	border-radius:7px;
 	background-color:#77C4D3;
+	-webkit-box-shadow: 2px 2px 0px 0px #CCC;
+	box-shadow: 2px 2px 0px 0px #CCC;
 }
 
 #card2	{	/* container, d.n.m.w. */
@@ -102,6 +104,8 @@ header {
 	right:0;
 	border-radius:7px;
 	background-color:#77C4D3;
+	-webkit-box-shadow: -2px 2px 0px 0px #CCC;
+	box-shadow: -2px 2px 0px 0px #CCC;
 }
 
 footer {
@@ -161,7 +165,7 @@ p.question	{
 	padding-top:50px;
 }
 
-li {
-	margin-top:3px;
+li:hover {
+	color:#77C4D3;
 }
 
