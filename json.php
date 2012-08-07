@@ -15,4 +15,9 @@ echo json_encode($hand, JSON_PRETTY_PRINT);
 
 echo var_dump($sofar); // Keeping track of already shown cards
 
+<<<<<<< HEAD
 ?>
+=======
+
+?>
+>>>>>>> 48566fc7309ba92d153bb775e19fd642beb07719
