@@ -1,5 +1,5 @@
-Rewired Olympics, Olympic top trumps with obscure data.
+Rewired Olympics: an unofficial Olympic top trumps game with obscure data.
 
-Most exciting game on the information super-highway.
+# Data used
 
-Thank you for reading.
+* [Data from the Guardian](http://www.guardian.co.uk/sport/series/london-2012-olympics-data). We're not really using this yet, but we should be.
