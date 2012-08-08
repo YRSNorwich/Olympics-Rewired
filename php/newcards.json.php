@@ -1,44 +1,34 @@
 <?php
-// the client askeds for some cards: /php/newcards.json.php?maxcards=14
-// how many cards did the client ask for?
-$maxcards = 4; // default
-if (isset($_GET['maxcards'])) {
-    $maxcards = $_GET['maxcards'];
+header('content-type: application/json; charset=utf-8');
+header("access-control-allow-origin: *");
+
+$hand_size = 4; // default
+if (isset($_GET['hand_size'])) {
+    $hand_size = $_GET['hand_size'];
 }
 
-header("Content-Type: application/json");
-
 require 'confidential_credentials.php';
-mysql_connect($host,$user,$pass)
-    or die(mysql_error());
 
-mysql_select_db($dbname)
-    or die(mysql_error());
+mysql_connect($host,$user,$pass) or die(mysql_error());
 
-$result = mysql_query("SELECT * FROM cards ORDER BY RAND() LIMIT " . $maxcards)
-    or die(mysql_error());
+mysql_select_db($dbname) or die(mysql_error());
+
+$result = mysql_query("SELECT * FROM cards ORDER BY RAND() LIMIT " . $hand_size) or die(mysql_error());
 
 $hand = $sofar = array();
-
-
 
 while( $row = mysql_fetch_array($result) ) {
     array_push($hand, $row);
     array_push($sofar, $row['id']);
 }
 
-if (isset($_GET['callback'])) {
-    echo htmlspecialchars($_GET['callback']);
-    echo '(';
-}
+$json = json_encode($hand);
 
-echo json_encode($hand);
+echo isset($_GET['callback'])
+    ? "{$_GET['callback']}($json)"
+    : $json;
 
-if (isset($_GET['callback'])) {
-    echo ')';
-}
-
-session_start();
+@session_start();
 
 if (!isset($_SESSION['sofar'])) {
     $_SESSION['sofar'] = array();
