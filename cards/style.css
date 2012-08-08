@@ -1,4 +1,4 @@
-/*Reset*/
+﻿/*Reset*/
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -79,7 +79,9 @@ img.flag	{
 float:right;
 margin-top:-36px;
 margin-right:2px;
-border:1px solid white
+border:1px solid white;
+width:52px;
+height:32px;
 }
 /*End Header*/
 img.background{
