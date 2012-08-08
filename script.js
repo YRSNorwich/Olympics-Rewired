@@ -18,22 +18,34 @@ function deal(deck){
 function play(player) {
 	var card = hands[player].pop(),
 		card_ui = $('#'+player),
-		data_ui = $('.datam', card_ui);
+		data_uia = $('.datam', card_ui);
+		data_uib = $('.datay', card_ui);
 		title_mine = $('.fillmem', card_ui);
 		title_yours = $('.fillmey', card_ui);
 
 		table[player] = card;
 
 		title_mine.append(card.country_name);
-		data_ui.append('<ul>');
-   		data_ui.append('<li>' + card.country_name + ', ' + card.country_code + '.</li>');
-   		data_ui.append('<li>Gold: ' + card.medals_gold + '</li>');
-   		data_ui.append('<li>Silver: ' + card.medals_silver + '</li>');
-   		data_ui.append('<li>Bronze: ' + card.medals_bronze + '</li>');
-   		data_ui.append('<li>Endangered Species: ' + card.endangered_species + '</li>');
-   		data_ui.append('<li>Military Personnel: ' + card.military_personnel + '</li>');
-   		data_ui.append('</ul>');
-   		data_ui.append('<br>');
+		data_uia.append('<ul>');
+   		data_uia.append('<li>' + card.country_name + ', ' + card.country_code + '.</li>');
+   		data_uia.append('<li>Gold: ' + card.medals_gold + '</li>');
+   		data_uia.append('<li>Silver: ' + card.medals_silver + '</li>');
+   		data_uia.append('<li>Bronze: ' + card.medals_bronze + '</li>');
+   		data_uia.append('<li>Endangered Species: ' + card.endangered_species + '</li>');
+   		data_uia.append('<li>Military Personnel: ' + card.military_personnel + '</li>');
+   		data_uia.append('</ul>');
+   		data_uia.append('<br>');
+
+  	  //	 	title_yours.append(card.country_name);
+	  // 		data_uib.append('<ul>');
+	  //  		data_uib.append('<li>' + card.country_name + ', ' + card.country_code + '.</li>');
+	  //  		data_uib.append('<li>Gold: ' + card.medals_gold + '</li>');
+	  //  		data_uib.append('<li>Silver: ' + card.medals_silver + '</li>');
+	  //  		data_uib.append('<li>Bronze: ' + card.medals_bronze + '</li>');
+	  //  		data_uib.append('<li>Endangered Species: ' + card.endangered_species + '</li>');
+	  //  		data_uib.append('<li>Military Personnel: ' + card.military_personnel + '</li>');
+	  //  		data_uib.append('</ul>');
+	  //  		data_uib.append('<br>');
 
    		game.trigger('cardPlayed', {player:player, card:card});
 
