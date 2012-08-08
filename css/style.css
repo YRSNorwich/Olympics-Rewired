@@ -145,14 +145,15 @@ section.image	{
 
 section.data	{
 	background-color:#DAEDE2;
-	width:205px;
+	width:222px;
 	height:110px;
 	margin-left:30px;
 	margin-top:5px;
 	-webkit-border-radius: 0px 0px 7px 7px;
 	border-radius: 0px 0px 7px 7px;
-	padding-left:40px;
+	padding-left:23px;
 	padding-top:38px;
+	font-size:17px;
 }
 
 p.question	{
