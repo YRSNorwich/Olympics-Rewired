@@ -20,19 +20,20 @@ $result = mysql_query("SELECT * FROM cards ORDER BY RAND() LIMIT " . $maxcards)
 
 $hand = $sofar = array();
 
+
+
 while( $row = mysql_fetch_array($result) ) {
     array_push($hand, $row);
     array_push($sofar, $row['id']);
 }
 echo json_encode($hand, JSON_PRETTY_PRINT);
 
-// remembering which cards were given
-
 
 session_start();
+
+if (!isset($_SESSION['sofar'])) {
+    $_SESSION['sofar'] = array();
+}
 array_push($_SESSION['sofar'], $sofar);
-
-// echo var_dump($_SESSION['sofar']);
-
-
+echo var_dump($_SESSION['sofar']);
 ?>
