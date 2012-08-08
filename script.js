@@ -44,7 +44,7 @@ $(document).ready(function () {
 	});
 
 	game.bind('dealCompleted', function(){
-		play(hands.mine);
+		play('mine');
 	});
 
 	game.bind('cardPlayed', function(evt){
