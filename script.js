@@ -2,8 +2,25 @@ $(document).ready(function () {
 	//  $('a').click(function(){
 		loadcards();
 	//  });
-	$.getJSON('getscards.json.php', function(data){
-	});
+	$.getJSON('getscards.json.php', function(data){});
+	entry = data[Math.floor(Math.random()*data.length)];
+});
+
+jQuery.removeFromArray = function(value, arr) {
+    return jQuery.grep(arr, function(elem, index) {
+        return elem !== value;
+    });
+};
+
+function(args){
+ 	var me=this;
+ 	$.getJSON(args.json,function(data) { 
+ 	me.set(args);
+ 	$.each(data, function(i){
+    var id="randomizr_item_" + i;
+    var temp= $('<div id='+ id +' class="randomizr-grid-items"><img src="'+ this.imageSmall[0]  +'" /></div>');
+    me.config.container.append(temp);
+    this.target=$(temp);
 });
 
 function loadcards(){
