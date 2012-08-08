@@ -37,7 +37,7 @@ function play(player) {
 
 $(document).ready(function () {
 	$.ajax({
-		url:'http://yrsolympics2.phpfogapp.com/php/newcards.json.php', 
+		url:'./php/newcards.json.php', 
 		data: {hand_size: HAND_SIZE*2},
 		success: deal,
 		dataType: 'jsonp'
