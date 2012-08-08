@@ -70,12 +70,12 @@ var ids = [];
 var rannum = Math.floor(Math.random()*4);
 
 	$.each(cards.you, function(index, value){
-		$('ul.data').append('<ul class="data">');
-   		$('ul.data').append('<li>' + value.country_name + '</li>');
-   		$('ul.data').append('<li>' + value.country_code + '</li>');
-   		$('ul.data').append('<li>' + value.continent + '</li>');
-   		$('ul.data').append('</ul>');
-   		$('ul.data').append('<br>');
+		$('section.data').append('<ul>');
+   		$('section.data').append('<li>' + value.country_name + '</li>');
+   		$('section.data').append('<li>' + value.country_code + '</li>');
+   		$('section.data').append('<li>' + value.continent + '</li>');
+   		$('section.data').append('</ul>');
+   		$('section.data').append('<br>');
 
    		your_cards[value.id] = {
    			country_code: value.country_code,
@@ -84,7 +84,7 @@ var rannum = Math.floor(Math.random()*4);
    		};
 
    		ids.push(value.id);
- 	});
+ 	}); 
 
 // $('#carduno' + value[rannum]).show();
 

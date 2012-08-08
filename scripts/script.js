@@ -85,7 +85,7 @@ var rannum = Math.floor(Math.random()*4);
    		ids.push(value.id);
  	});
 
-// $('#carduno' + value[rannum]).show();
+	 $('#carduno' + value[rannum]).show();
 
 }
 
