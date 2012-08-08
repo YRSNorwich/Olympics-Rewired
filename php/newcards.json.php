@@ -13,7 +13,9 @@ mysql_connect($host,$user,$pass) or die(mysql_error());
 
 mysql_select_db($dbname) or die(mysql_error());
 
-$result = mysql_query("SELECT * FROM cards ORDER BY RAND() LIMIT " . $hand_size) or die(mysql_error());
+$result = mysql_query("SELECT * FROM cards WHERE id!='103' ORDER BY RAND() LIMIT " . $hand_size) or die(mysql_error());
+
+// ^ To do: exclude previously spat cards from being selected again ("NOT LIKE"?)
 
 $hand = $sofar = array();
 
@@ -31,10 +33,12 @@ echo isset($_GET['callback'])
 @session_start();
 
 if (!isset($_SESSION['sofar'])) {
-    $_SESSION['sofar'] = array();
+    $_SESSION['sofar'] = $sofar;
+} else {
+    $_SESSION['sofar'] = array_merge($_SESSION['sofar'], $sofar);
 }
-array_push($_SESSION['sofar'], $sofar);
-// echo '/*';
-// echo var_dump($_SESSION['sofar']);
-// echo '*/';
+
+echo "\n/*\n";
+echo var_dump($_SESSION['sofar']);
+echo "*/\n";
 ?>
