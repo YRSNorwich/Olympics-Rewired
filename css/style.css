@@ -70,7 +70,7 @@ header {
 	position:absolute;
 }
 
-#hand2	{ 		/* styling, the blue box!!!! */
+#card2	{ 		/* styling, the blue box!!!! */
 	width:335px;
 	height:520px;
 	float:right;
@@ -98,7 +98,7 @@ header {
 	box-shadow: 2px 2px 0px 0px #CCC;
 }
 
-#card2	{	/* container, d.n.m.w. */
+#hand2	{	/* container, d.n.m.w. */
 	width:305px;
 	height:417px;
 	right:0;
@@ -145,17 +145,14 @@ section.image	{
 
 section.data	{
 	background-color:#DAEDE2;
-	width:245px;
-	height:150px;
+	width:205px;
+	height:110px;
 	margin-left:30px;
 	margin-top:5px;
 	-webkit-border-radius: 0px 0px 7px 7px;
 	border-radius: 0px 0px 7px 7px;
-}
-
-ul.data	{
-	margin-left:30px;
-	padding-top:30px;
+	padding-left:40px;
+	padding-top:38px;
 }
 
 p.question	{

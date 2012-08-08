@@ -20,7 +20,7 @@ function loadcards(){
 		}
 	}); */
 
-	$('#card1').hide();
+	// $('#card1').hide();
 
 	var cards = {
 		you: [
@@ -70,12 +70,12 @@ var ids = [];
 var rannum = Math.floor(Math.random()*4);
 
 	$.each(cards.you, function(index, value){
-		$('#hand1').append('<ul>');
-   		$('#hand1').append('<li>' + value.country_name + '</li>');
-   		$('#hand1').append('<li>' + value.country_code + '</li>');
-   		$('#hand1').append('<li>' + value.continent + '</li>');
-   		$('#hand1').append('</ul>');
-   		$('#hand1').append('<br>');
+		$('ul.data').append('<ul class="data">');
+   		$('ul.data').append('<li>' + value.country_name + '</li>');
+   		$('ul.data').append('<li>' + value.country_code + '</li>');
+   		$('ul.data').append('<li>' + value.continent + '</li>');
+   		$('ul.data').append('</ul>');
+   		$('ul.data').append('<br>');
 
    		your_cards[value.id] = {
    			country_code: value.country_code,
