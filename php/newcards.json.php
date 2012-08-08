@@ -26,7 +26,7 @@ while( $row = mysql_fetch_array($result) ) {
     array_push($hand, $row);
     array_push($sofar, $row['id']);
 }
-echo json_encode($hand, JSON_PRETTY_PRINT);
+echo json_encode($hand);
 
 
 session_start();
