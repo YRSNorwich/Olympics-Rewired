@@ -26,6 +26,13 @@ while( $row = mysql_fetch_array($result) ) {
     array_push($hand, $row);
     array_push($sofar, $row['id']);
 }
+
+if (isset($_GET['callback'])) {
+    echo '(';
+    echo htmlspecialchars($_GET['callback']);
+    echo ')';
+}
+
 echo json_encode($hand);
 
 
@@ -35,7 +42,7 @@ if (!isset($_SESSION['sofar'])) {
     $_SESSION['sofar'] = array();
 }
 array_push($_SESSION['sofar'], $sofar);
-echo '/*';
-echo var_dump($_SESSION['sofar']);
-echo '*/';
+// echo '/*';
+// echo var_dump($_SESSION['sofar']);
+// echo '*/';
 ?>
