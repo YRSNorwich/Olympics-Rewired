@@ -1,6 +1,6 @@
 <?php
-header('content-type: application/json; charset=utf-8');
-header("access-control-allow-origin: *");
+header('Content-Type: application/json; charset=utf-8');
+header('Access-Control-Allow-Origin: http://localhost/, http://yrsolympics2.phpfogapp.com/');
 
 $hand_size = 4; // default
 if (isset($_GET['hand_size'])) {
