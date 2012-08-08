@@ -18,10 +18,13 @@ function deal(deck){
 function play(player) {
 	var card = hands[player].pop(),
 		card_ui = $('#'+player),
-		data_ui = $('.data', card_ui);
+		data_ui = $('.datam', card_ui);
+		title_mine = $('.fillmem', card_ui);
+		title_yours = $('.fillmey', card_ui);
 
 		table[player] = card;
 
+		title_mine.append(card.country_name);
 		data_ui.append('<ul>');
    		data_ui.append('<li>' + card.country_name + ', ' + card.country_code + '.</li>');
    		data_ui.append('<li>Gold: ' + card.medals_gold + '</li>');
