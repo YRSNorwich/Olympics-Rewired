@@ -1,0 +1,120 @@
+/*Reset*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+	margin-top: 0px;
+	margin-right: 0;
+	margin-bottom: 0;
+	margin-left: 0;
+	padding: 0;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,400,600,700);
+
+body {
+	line-height: 1;
+	font-family: 'Source Sans Pro', sans-serif;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/*End Reset*/
+
+/*Main Styles */
+#wrap {
+  width: 360px;
+  height:480px;
+  margin: auto ;
+ }
+	
+/*End Styles*/
+/*Header*/
+#header h1 {
+ background: #ea2e49 ;
+ text-indent: 4px;
+ font-size:28px;
+ float: left;
+ width:360px;
+ height:38px;
+ color: white;
+ float:right;
+ border-left:2px solid #333645;
+ border-right:2px solid #333645;
+ border-top:2px solid #333645;
+ margin-right:-4px;
+  
+
+}
+img.flag	{
+float:right;
+margin-top:-36px;
+margin-right:2px;
+border:1px solid white
+}
+/*End Header*/
+img.background{
+ border-left:2px solid #333645;
+ border-right:2px solid #333645;
+ border-bottom:2px solid #333645;
+
+}
+/*Stats*/
+#stats {
+	background:#77c4d4;
+  border-radius: 10px;
+  margin-left:505px;
+	margin-top:-20px;
+}
+#stats h2 {
+  font-size:28px;
+  color:#d9ede2;
+  margin-left:120px
+}
+#stats ul li { 
+ color: #333645;
+ font-size: 16px;
+ position: relative;
+ top: -7px;
+ left: 3px;
+ padding:2px;
+}
+#stats ul li#Number { 
+ color: white;
+ font-size: 16px;
+ position: relative;
+ top: -7px;
+ left: 3px;
+ padding:2px;
+}
+
+/*Stats*/
