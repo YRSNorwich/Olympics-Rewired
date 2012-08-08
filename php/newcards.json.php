@@ -32,7 +32,7 @@ while( $row = mysql_fetch_array($result) ) {
     array_push($sofar, $row['id']);
 }
 
-$json = json_encode($hand,JSON_PRETTY_PRINT);
+$json = json_encode($hand/*,JSON_PRETTY_PRINT*/);
 
 echo isset($_GET['callback'])
     ? "{$_GET['callback']}($json)"
