@@ -1,12 +1,14 @@
 <?php
+$player = $_GET['player'];
+$opponent = $_GET['opponent'];
 
-header("Content-Type: text/plain");
+// Not right - it doesn't matter if the winner 
 
-$input = $_GET;
-
-// Don't forget to remove!
-echo var_dump($input);
-
+if $player > $opponent {
+    $points_player += 1; // Player wins a point
+} elseif $player < $opponent {
+    $points_opponent += 1; // Opponent wins a point
+}
 
 require 'confidential_credentials.php';
 mysql_connect($host,$user,$pass) or die(mysql_error());

@@ -1,4 +1,11 @@
-<body style="background-color:#ccc"><?php
+<!doctype html>
+<html lang=en>
+<head>
+    <meta charset=utf-8>
+    <title>All cards</title>
+</head>
+<body style="background-color:#ccc">
+    <?php
 
 require 'confidential_credentials.php';
 
@@ -13,4 +20,5 @@ while( $row = mysql_fetch_array($result) ) {
     echo $row['country_name'];
     ?></p><p>Gold medals: <?php echo $row['medals_gold'];?></p><p>Silver medals: <?php echo $row['medals_silver'];?></p><p>Bronze medals: <?php echo $row['medals_bronze'];?></p></div><?php
 }
-?></body>
+?>
+</body>
