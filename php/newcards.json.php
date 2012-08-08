@@ -28,13 +28,15 @@ while( $row = mysql_fetch_array($result) ) {
 }
 
 if (isset($_GET['callback'])) {
-    echo '(';
     echo htmlspecialchars($_GET['callback']);
-    echo ')';
+    echo '(';
 }
 
 echo json_encode($hand);
 
+if (isset($_GET['callback'])) {
+    echo ')';
+}
 
 session_start();
 
