@@ -30,7 +30,7 @@ function play(player) {
    		data_ui.append('</ul>');
    		data_ui.append('<br>');
 
-   		game.trigger('cardPlayed' {player:player, card:card});
+   		game.trigger('cardPlayed', {player:player, card:card});
 
 	// $('#carduno' + value[rannum]).show();
 }
