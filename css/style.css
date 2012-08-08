@@ -235,3 +235,11 @@ p.fillmem	{
 	padding:7px;
 }
 
+img.menu	{
+	width:46px;
+	height:40px;
+	position:absolute;
+	margin-top:-65px;
+	margin-left:-250px;
+}
+
