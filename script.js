@@ -1,8 +1,9 @@
-//  test update for post commit hook
 $(document).ready(function () {
 	//  $('a').click(function(){
 		loadcards();
 	//  });
+	$.getJSON('getscards.json.php', function(data){
+	});
 });
 
 function loadcards(){
@@ -85,6 +86,7 @@ function loadcards(){
 var your_cards = [];
 var ids = [];
 var rannum = Math.floor(Math.random()*4);
+cards.you.length;
 
 	$.each(cards.you, function(index, value){
 		$('section.data').append('<ul>');
