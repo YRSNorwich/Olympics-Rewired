@@ -41,6 +41,7 @@ function deal(deck){
 $(document).ready(function () {
 	$.ajax({
 		url:'http://yrsolympics2.phpfogapp.com/php/newcards.json.php?callback=?', 
+		data: {hand_size: HAND_SIZE*2},
 		success: deal,
 		type: 'jsonp'
 	});
