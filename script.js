@@ -33,9 +33,7 @@ function deal(deck){
 
 	   		ids.push(value.id);
 	 	}); 
-
 	// $('#carduno' + value[rannum]).show();
-
 }
 
 $(document).ready(function () {
