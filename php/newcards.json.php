@@ -35,5 +35,7 @@ if (!isset($_SESSION['sofar'])) {
     $_SESSION['sofar'] = array();
 }
 array_push($_SESSION['sofar'], $sofar);
+echo '/*';
 echo var_dump($_SESSION['sofar']);
+echo '*/';
 ?>
