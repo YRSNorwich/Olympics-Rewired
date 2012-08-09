@@ -10,5 +10,4 @@ if (empty($host)) {
     $pass = '';
     $dbname = 'trump';
 }
-
 ?>

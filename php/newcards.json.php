@@ -36,7 +36,7 @@ $json = json_encode($hand/*,JSON_PRETTY_PRINT*/);
 
 echo isset($_GET['callback'])
     ? "{$_GET['callback']}($json)"
-    : $json;
+    : $json; // I don't understand this syntax but it works (copied & pasted) (!)
 
 if (!isset($_SESSION['sofar'])) {
     $_SESSION['sofar'] = $sofar;

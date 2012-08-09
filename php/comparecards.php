@@ -1,5 +1,10 @@
 <?php
-header('content-type: text/plain');
+header('content-type: application/json');
+session_start();
+
+if (!isset($_SESSION['score'])) {
+    $_SESSION['score'] = array('mine' => 0, 'yours' => 0);
+}
 
 // require 'confidential_credentials.php';
 // mysql_connect($host,$user,$pass) or die(mysql_error());
@@ -7,7 +12,7 @@ header('content-type: text/plain');
 // result({mine:1, yours:0, lastWinner:'mine'});
 
 $compare = $_GET['chosenProperty'];
-$card_mine = $card_yours = $_GET['mine'];
+$card_mine = $card_yours = $_GET['mine']; //
 // $card_yours = $_GET['yours'];
 
 // echo '/*
@@ -27,22 +32,22 @@ if ( !settype($card_mine[$compare],'integer') or !settype($card_yours[$compare],
 $score_mine = $score_yours = 0;
 if ( settype($card_mine[$compare],'integer') > settype($card_yours[$compare],'integer') )
 {
-   $score_mine .+ 100;
-   $score_yours .- 1;
+   $_SESSION['score']['mine'] .+ 100;
+   $_SESSION['score']['yours'] .- 1;
    $lastWinner = 'me';
 }
 elseif ( settype($card_mine[$compare],'integer') < settype($card_yours[$compare],'integer') )
 {
-    $score_mine .- 1;
-    $score_yours .+ 100;
+    $_SESSION['score']['mine'] .- 1;
+    $_SESSION['score']['yours'] .+ 100;
     $lastWinner = 'you';
 }
 else
 {
-    $score_mine .+ 0;
-    $score_yours .+ 0;
+    $_SESSION['score']['mine'] .+ 0;
+    $_SESSION['score']['yours'] .+ 0;
     $lastWinner = 'tie';
 }
-echo json_encode( array('mine' => $score_mine  , 'yours' => $score_yours, 'lastWinner' => $lastWinner) );
 
+echo json_encode( array('mine' => $_SESSION['score']['mine'], 'yours' => $_SESSION['score']['yours'], 'lastWinner' => $lastWinner) );
 ?>
