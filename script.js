@@ -55,12 +55,19 @@ $(document).ready(function () {
 
 			table.chosenProperty = name;
 
-			$.ajax({
+			function result(data){
+				game.score = data;
+				game.trigger('scoreUpdated');
+			}
+
+			/* $.ajax({
 				url:'./php/comparecards.php', 
 				data: table,
 				dataType: 'json',
-				success: function(data){}
-			});
+				success: result
+			}); */
+
+			result({mine:1, yours:0, lastWinner:'mine'});
 
 	});
 
