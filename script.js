@@ -51,11 +51,17 @@ $(document).ready(function () {
 
 	game.bind('scoreUpdated', function(evt){
 		console.log(game.score);
-
-		if (game.score.mine === 'me') {
+	
+		if (game.score.lastWinner === 'me')
+		{
 			alert('winner!');
-		} else {
-			alert('looser!!! you suck');
+		} 
+			else if (game.score.lastWinner === 'you')
+		{
+			alert('loser');
+		}
+			else{
+			alert('tie :-(');
 		}
 	});
 
@@ -71,14 +77,14 @@ $(document).ready(function () {
 				game.trigger('scoreUpdated');
 			}
 
-			/* $.ajax({
+			 $.ajax({
 				url:'./php/comparecards.php', 
 				data: table,
 				dataType: 'json',
 				success: result
-			}); */
+			}); 
 
-			result({mine:1, yours:0, lastWinner:'mine'});
+			//result({mine:1, yours:0, lastWinner:'mine'});
 
 	});
 

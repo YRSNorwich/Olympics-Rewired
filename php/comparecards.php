@@ -12,8 +12,8 @@ if (!isset($_SESSION['score'])) {
 // result({mine:1, yours:0, lastWinner:'mine'});
 
 $compare = $_GET['chosenProperty'];
-$card_mine = $card_yours = $_GET['mine']; //
-// $card_yours = $_GET['yours'];
+$card_mine = $_GET['mine']; //
+$card_yours = $_GET['yours'];
 
 // echo '/*
 // ';
@@ -23,20 +23,20 @@ $card_mine = $card_yours = $_GET['mine']; //
 // $player_card = 'gb';
 // mysql_query();
 
-if ( !settype($card_mine[$compare],'integer') or !settype($card_yours[$compare],'integer') )
-{
-    $card_mine[$compare] = strlen($card_mine[$compare]);
-    $card_mine[$compare] = strlen($card_mine[$compare]);
-}
+// if ( !settype($card_mine[$compare],'integer') or !settype($card_yours[$compare],'integer') )
+// {
+//     $card_mine[$compare] = strlen($card_mine[$compare]);
+//     $card_mine[$compare] = strlen($card_mine[$compare]);
+// }
 
 $score_mine = $score_yours = 0;
-if ( settype($card_mine[$compare],'integer') > settype($card_yours[$compare],'integer') )
+if ( $card_mine[$compare] > $card_yours[$compare] )
 {
    $_SESSION['score']['mine'] .+ 100;
    // $_SESSION['score']['yours'] 1;
    $lastWinner = 'me';
 }
-elseif ( settype($card_mine[$compare],'integer') < settype($card_yours[$compare],'integer') )
+elseif ( $card_mine[$compare] < $card_yours[$compare] )
 {
     // $_SESSION['score']['mine'] .- 1;
     $_SESSION['score']['yours'] .+ 100;
