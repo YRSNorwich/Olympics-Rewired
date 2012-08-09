@@ -51,6 +51,12 @@ $(document).ready(function () {
 
 	game.bind('scoreUpdated', function(evt){
 		console.log(game.score);
+
+		if (game.score.mine === 'me') {
+			alert('winner!');
+		} else {
+			alert('looser!!! you suck');
+		}
 	});
 
 	$('body').delegate('#mine .data li', 'click', function(evt){
