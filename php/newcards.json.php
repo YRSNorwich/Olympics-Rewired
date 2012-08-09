@@ -1,25 +1,25 @@
 <?php
-require 'confidential_credentials.php';
 header('Content-Type: application/json; charset=utf-8');
 header('Access-Control-Allow-Origin: http://localhost/, http://yrsolympics2.phpfogapp.com/');
+
 @session_start();
 
-$hand_size = 4; // default
-if (isset($_GET['hand_size'])) {
-    $hand_size = $_GET['hand_size'];
+$hand_size = 4; // set default hand_size
+
+if (isset($_GET['hand_size']) and settype($_GET['hand_size'], 'integer')) { // if ?hand_size= is specified, and is an integer
+    $hand_size = $_GET['hand_size']; // replace default
 }
 
-
+require 'confidential_credentials.php';
 mysql_connect($host,$user,$pass) or die(mysql_error());
-
 mysql_select_db($dbname) or die(mysql_error());
 
-$query = "SELECT * FROM cards";
+$query = 'SELECT * FROM cards';
 if (isset($_SESSION['sofar'])) {
-    $query .= " WHERE id NOT IN ('";
-    $query .= implode( "','" , $_SESSION['sofar'] ) . "')";
+    $query .= ' WHERE id NOT IN ("';
+    $query .= implode( '","' , $_SESSION['sofar'] ) . '")'; // possibly not secure
 }
-$query .= " ORDER BY RAND() LIMIT ";
+$query .= ' ORDER BY RAND() LIMIT ';
 $query .= $hand_size;
 
 // echo $query;

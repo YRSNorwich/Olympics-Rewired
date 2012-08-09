@@ -1,6 +1,12 @@
 <?php
-$player = $_GET['player'];
-$opponent = $_GET['opponent'];
+require 'confidential_credentials.php';
+mysql_connect($host,$user,$pass) or die(mysql_error());
+mysql_select_db($dbname) or die(mysql_error());
+
+$player_card = $_GET['player'];
+$opponent_card = $_GET['opponent'];
+
+
 
 // Not right - it doesn't matter if the winner 
 
@@ -10,10 +16,6 @@ if $player > $opponent {
     $points_opponent += 1; // Opponent wins a point
 }
 
-require 'confidential_credentials.php';
-mysql_connect($host,$user,$pass) or die(mysql_error());
-
-mysql_select_db($dbname) or die(mysql_error());
 
 
 ?>
