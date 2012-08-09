@@ -54,14 +54,14 @@ $(document).ready(function () {
 	
 		if (game.score.lastWinner === 'me')
 		{
-			alert('winner!');
+			$('.result').append('<p>You Won!!!</p>')
 		} 
 			else if (game.score.lastWinner === 'you')
 		{
-			alert('loser');
+			$('.result').append('<p>You Lost...</p>')
 		}
 			else{
-			alert('tie :-(');
+			$('.result').append('<p>Tie!</p>')
 		}
 	});
 
