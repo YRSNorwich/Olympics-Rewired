@@ -5,6 +5,8 @@
     <title>All cards</title>
 </head>
 <body style="background-color:#ccc">
+    <h1 style="display:inline-block;margin:20px">Printable cards</h1>
+    <p  style="display:inline-block"><a href="javascript:window.print()">Print</a></p><br>
     <?php
 
 require 'confidential_credentials.php';

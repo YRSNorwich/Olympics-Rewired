@@ -1,15 +1,21 @@
 <?php
-require 'confidential_credentials.php';
-mysql_connect($host,$user,$pass) or die(mysql_error());
-mysql_select_db($dbname) or die(mysql_error());
+header('content-type: text/plain');
 
-echo var_dump($_GET[]);
+// require 'confidential_credentials.php';
+// mysql_connect($host,$user,$pass) or die(mysql_error());
+// mysql_select_db($dbname) or die(mysql_error());
 
-// $player_card = $_GET['mine'];
-// $opponent_card = $_GET['yours'];
+$compare = $_GET['chosenProperty'];
+$card_mine = $_GET['mine'];
+$card_yours = $_GET['yours'];
+
+echo '/*
+';
+echo var_dump($_GET);
+echo '*/';
 
 $player_card = 'gb';
-mysql_query();
+// mysql_query();
 
-
+echo is_integer($card_mine[$compare]) > is_integer($card_yours[$compare]);
 ?>
