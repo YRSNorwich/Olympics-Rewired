@@ -33,12 +33,12 @@ $score_mine = $score_yours = 0;
 if ( settype($card_mine[$compare],'integer') > settype($card_yours[$compare],'integer') )
 {
    $_SESSION['score']['mine'] .+ 100;
-   $_SESSION['score']['yours'] .- 1;
+   // $_SESSION['score']['yours'] 1;
    $lastWinner = 'me';
 }
 elseif ( settype($card_mine[$compare],'integer') < settype($card_yours[$compare],'integer') )
 {
-    $_SESSION['score']['mine'] .- 1;
+    // $_SESSION['score']['mine'] .- 1;
     $_SESSION['score']['yours'] .+ 100;
     $lastWinner = 'you';
 }
