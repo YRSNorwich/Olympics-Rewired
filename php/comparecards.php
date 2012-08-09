@@ -23,8 +23,8 @@ elseif ( $card_mine[$compare] < $card_yours[$compare] )
 {
     $_SESSION['score']['yours'] += 100;
     $lastWinner = 'yours';
-}
-else
+
+}else
 {
     $lastWinner = 'tie';
 }
