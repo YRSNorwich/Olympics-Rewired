@@ -1,0 +1,2 @@
+<a href="https://twitter.com/intent/tweet?button_hashtag=OlympicsRewired&text=I%20just%20completed%20a%20game%20of%20Olympics%20Rewired" class="twitter-hashtag-button" data-related="designerstech,benhol04" data-url="http://tinyurl.com/olympicsrewired">Tweet #OlympicsRewired</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
