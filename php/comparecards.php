@@ -16,12 +16,12 @@ if ( !settype($card_mine[$compare],'integer') or !settype($card_yours[$compare],
 
 if ( $card_mine[$compare] > $card_yours[$compare] )
 {
-   $_SESSION['score']['mine'] += 100;
+   $_SESSION['score']['mine'] += 1;
    $lastWinner = 'mine';
 }
 elseif ( $card_mine[$compare] < $card_yours[$compare] )
 {
-    $_SESSION['score']['yours'] += 100;
+    $_SESSION['score']['yours'] += 1;
     $lastWinner = 'yours';
 
 }else
