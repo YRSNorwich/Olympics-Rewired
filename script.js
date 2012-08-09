@@ -64,12 +64,12 @@ $(document).ready(function () {
 			$('.result').append('<p>Tie!</p>')
 		}
 
-		$('.resulta').html(game.score.mine);
-		$('.resultb').html(game.score.yours);
+		$('p.resulta').html(game.score.mine);
+		$('p.resultb').html(game.score.yours);
 
 		if (game.score.mine <= 6  || game.score.yours <= 6)
 		{
-			$('#wrap').addClass('hide');
+			$('#wrap').addClass('hide1');
 		}
 
 	});
