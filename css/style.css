@@ -178,6 +178,7 @@ p.question	{
 
 li:hover {
 	color:#77C4D3;
+	cursor:pointer;
 }
 
 section.mine {
@@ -280,5 +281,9 @@ p.resultb	{
 	color:#FFF;
 	text-align:center;
 	margin-top:6px;
+}
+
+.hide	{
+	visibility:hidden !important;
 }
 
