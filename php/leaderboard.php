@@ -16,5 +16,8 @@
         <p class="title">Leaderboard</p>
         <a href="../" onClick="window.location.reload();return false;"><img class="menu"  src="../images/menu.png" /></a>
     </header>
+    <ul>
+        <li>USER 
+    </ul>
 </body>
 </html>
