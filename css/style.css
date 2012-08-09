@@ -243,3 +243,42 @@ img.menu	{
 	margin-left:-250px;
 }
 
+#lose	{
+	width:65px;
+	height:65px;
+	border-radius:5px;
+	background-color:#E63030;
+	float:right;
+	margin-top:-65px;
+}
+
+#win {
+	width:65px;
+	height:65px;
+	border-radius:5px;
+	background:#7DB352;
+}
+
+#wrapl	{
+	width:445px;
+	height:65px;
+	margin:auto;
+	margin-top:60px;
+}
+
+p.resulta	{
+	font-size:3.4em;
+	font-weight:700;
+	color:#FFF;
+	text-align:center;
+	padding-top:6px;
+}
+
+p.resultb	{
+	font-size:3.4em;
+	font-weight:700;
+	color:#FFF;
+	text-align:center;
+	margin-top:6px;
+}
+
