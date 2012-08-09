@@ -52,11 +52,11 @@ $(document).ready(function () {
 	game.bind('scoreUpdated', function(evt){
 		console.log(game.score);
 	
-		if (game.score.lastWinner === 'me')
+		if (game.score.lastWinner === 'mine')
 		{
 			$('.result').append('<p>You Won!!!</p>')
 		} 
-			else if (game.score.lastWinner === 'you')
+			else if (game.score.lastWinner === 'yours')
 		{
 			$('.result').append('<p>You Lost...</p>')
 		}
