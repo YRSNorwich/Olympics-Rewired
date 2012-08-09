@@ -1,12 +1,16 @@
-<!doctype html>
-<html lang=en>
+<!DOCTYPE html>
+<html lang="en">
 <head>
     <meta charset=utf-8>
     <title>All cards</title>
 </head>
+<<<<<<< HEAD
 <body style="background-color:#ccc">
     <h1 style="display:inline-block;margin:20px">Printable cards</h1>
     <p  style="display:inline-block"><a href="javascript:window.print()">Print</a></p><br>
+=======
+<body style="background-color:#CCCCCC">
+>>>>>>> Entré almaty trois
     <?php
 
 require 'confidential_credentials.php';
