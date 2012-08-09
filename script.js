@@ -18,23 +18,25 @@ function deal(deck){
 function play(player) {
 	var card = hands[player].pop(),
 		card_ui = $('#'+player),
-		data_uia = $('.datam', card_ui);
-		data_uib = $('.datay', card_ui);
-		title_mine = $('.fillmem', card_ui);
-		title_yours = $('.fillmey', card_ui);
+		data_ui = $('.data', card_ui),
+		title = $('.fillme', card_ui),
+		data = null;
 
 		table[player] = card;
 
-		title_mine.append(card.country_name);
-		data_uia.append('<ul>');
-   		data_uia.append('<li>' + card.country_name + ', ' + card.country_code + '.</li>');
-   		data_uia.append('<li>Gold: ' + card.medals_gold + '</li>');
-   		data_uia.append('<li>Silver: ' + card.medals_silver + '</li>');
-   		data_uia.append('<li>Bronze: ' + card.medals_bronze + '</li>');
-   		data_uia.append('<li>Endangered Species: ' + card.endangered_species + '</li>');
-   		data_uia.append('<li>Military Personnel: ' + card.military_personnel + '</li>');
-   		data_uia.append('</ul>');
-   		data_uia.append('<br>');
+		title.text(card.country_name);
+		$('.image', card_ui).css({'background-image':'url(./cards/img/'+ card.country_code +'/background.jpg)'});
+		data = $('<ul>')
+   			.append('<li>' + card.country_name + ', ' + card.country_code + '.</li>')
+   			.append('<li>Gold: ' + card.medals_gold + '</li>')
+   			.append('<li>Silver: ' + card.medals_silver + '</li>')
+   			.append('<li>Bronze: ' + card.medals_bronze + '</li>')
+   			.append('<li>Endangered Species: ' + card.endangered_species + '</li>')
+   			.append('<li>Military Personnel: ' + card.military_personnel + '</li>');
+
+   		data_ui.html(data);
+
+   		
 
   	  //	 	title_yours.append(card.country_name);
 	  // 		data_uib.append('<ul>');
