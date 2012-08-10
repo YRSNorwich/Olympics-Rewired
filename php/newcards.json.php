@@ -43,9 +43,4 @@ if (!isset($_SESSION['sofar'])) {
 } else {
     $_SESSION['sofar'] = array_merge($_SESSION['sofar'], $sofar);
 }
-
-// echo "\n/*\nso josh knows what he's doing:\n\n";
-// echo $query . "\n\n";
-// echo "id='" . implode("' id!='",$_SESSION['sofar']) . "'";
-// echo "*/\n";
 ?>

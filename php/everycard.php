@@ -5,25 +5,46 @@
 <title>All cards</title>
 <style>
 body{
+    margin:0;
     background:#DAEDE2;
     font-family:'Hoefler Text',Garamond,serif;
+    text-align:center;
 }
 div.card{
+    margin:0 -1px -1px 0;
     background:#fff;
     text-align:center;
-    box-shadow:2px 2px #fff,3px 3px #000,5px 5px #fff,6px 6px #000,8px 8px #fff,9px 9px #000;
     background:#fff;
-    width:160px;
-    height:260px;
-    border:1px solid #000;
-    border-radius:20px;
-    padding:10px 20px;margin:10px;
+    width:250px;
+    height:400px;
+    border:1px dashed #000;
+    padding:6px 20px;
+    display:inline-block;
+}
+h1{
+    margin:0;
+    font-size: 35px;
+    text-align:center;
+    padding:26px 0;
+    color:#fff;
+    background:#ff2819;
+    border-radius: 0px;
+}
+h2{
+    margin:18px 0;
+    font-size:18px;
+}
+img{
+    max-width:100%;
+}
+@media print{
+    h1,#print{display: none}
 }
 </style>
 </head>
 <body>
-<h1 style="display:inline-block;margin:20px">Printable cards</h1>
-<p style="display:inline-block"><a href="javascript:window.print()">Print</a></p><br>
+<h1>Printable cards</h1>
+<p id="print"><button onclick="javascript:window.print()">Print</button></p><br>
 <?php
 
 require 'confidential_credentials.php';
@@ -34,14 +55,14 @@ mysql_select_db($dbname) or die(mysql_error());
 $result = mysql_query('SELECT * FROM cards') or die(mysql_error());
 
 while( $row = mysql_fetch_array($result) ) {
-?>
-<div class="card">
+?><div class="card">
 <h2><?php echo $row['country_name']; ?></h2>
+<p style="overflow:hidden;height:160px;"><img src="http://localhost/cards/img/<?php echo $row['country_code']; ?>/background.jpg" alt="" />
 <p>Gold medals: <?php echo $row['medals_gold'];?></p>
 <p>Silver medals: <?php echo $row['medals_silver'];?></p>
 <p>Bronze medals: <?php echo $row['medals_bronze'];?></p>
-</div>
-<?php
+<p>CO<sub>2</sub> rank: <?php echo $row['carbon_rank'];?></p>
+</div><?php
 }
 ?>
 </body>

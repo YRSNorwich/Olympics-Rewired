@@ -30,4 +30,11 @@ else
 }
 
 echo json_encode( array('mine' => $_SESSION['score']['mine'], 'yours' => $_SESSION['score']['yours'], 'lastWinner' => $lastWinner) );
+
+// require 'confidential_credentials.php';
+// mysql_connect($host,$user,$pass) or die(mysql_error());
+// mysql_select_db($dbname) or die(mysql_error());
+
+// mysql_query('INSERT into gameplay') or die(mysql_error());
+
 ?>
