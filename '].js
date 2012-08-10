@@ -52,7 +52,7 @@ $(document).ready(function () {
 	game.bind('scoreUpdated', function(evt){
 		console.log(game.score);
 	
-		/*if (game.score.lastWinner === 'mine')
+		if (game.score.lastWinner === 'mine')
 		{
 			$('.result').append('<p>You Won!!!</p>')
 		} 
@@ -62,12 +62,12 @@ $(document).ready(function () {
 		}
 			else{
 			$('.result').append('<p>Tie!</p>')
-		}*/
+		}
 
 		$('p.resulta').html(game.score.mine);
 		$('p.resultb').html(game.score.yours);
 
-		/*if (game.score.mine > 4)
+		if (game.score.mine > 4)
 		{
 			$('#wrap').hide("explode", {}, 2500);
 			$('#winner').hide("explode", {}, 2500);
@@ -77,7 +77,7 @@ $(document).ready(function () {
 		{
 			$('#wrap').hide("explode", {}, 2500);
 			$('#winner').hide("explode", {}, 2500);
-		}*/
+		}
 
 	});
 
@@ -88,34 +88,28 @@ $(document).ready(function () {
 			name = el.data('name');
 
 			table.chosenProperty = name;
-			$('#yours').hide();
 			play('yours');
-			$('#yours').show(500);
+
+			function result(data){
+				game.score = data;
+				game.trigger('scoreUpdated');
+			}
 
 			$.ajax({
 				url:'./php/comparecards.php', 
 				data: table,
-				async: false,
 				dataType: 'json',
-				success: function(data){
-					debugger;
-					game.score = data;
-					game.trigger('scoreUpdated');
-					if(game.score.lastWinner && game.score.lastWinner === 'mine')
-					{
-						$('.scroll').text('YOU WON!')
-					}
-
-					if(game.score.lastWinner && game.score.lastWinner === 'yours')
-					{
-						$('.scroll').text('You lost :-*')
-					}
-					$('#yours').delay(2000).hide(2500, function(){
-						play('mine');
-						$('.scroll').text('Pick a stat to compare!');
-					});
-				}
+				success: result
 			}); 
+
+			$('#yours .data').delay(2000).hide(2500);
+			$('#yours .image').delay(2000).hide(2500);
+
+			//result({mine:1, yours:0, lastWinner:'mine'});
+
+			$('#yours .data').show(2500);
+			$('#yours .image').show(2500);
+			play('yours');
 
 	});
 
