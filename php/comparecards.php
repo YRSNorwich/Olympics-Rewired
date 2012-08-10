@@ -11,7 +11,7 @@ $card_yours = $_GET['yours'];
 
 if ( !settype($card_mine[$compare],'integer') or !settype($card_yours[$compare],'integer') ){
     $card_mine[$compare] = strlen($card_mine[$compare]);
-    $card_mine[$compare] = strlen($card_mine[$compare]);
+    $card_mine[$compare] = strlen($card_mine[$compare]); // Compare the length of country names!!
 }
 
 if ( $card_mine[$compare] > $card_yours[$compare] )
@@ -23,8 +23,8 @@ elseif ( $card_mine[$compare] < $card_yours[$compare] )
 {
     $_SESSION['score']['yours'] += 1;
     $lastWinner = 'yours';
-
-}else
+}
+else
 {
     $lastWinner = 'tie';
 }
