@@ -69,14 +69,14 @@ $(document).ready(function () {
 
 		if (game.score.mine > 4)
 		{
-			$('#wrap').addClass('hide');
-			$('#loser').css({'visibility': 'hidden;', 'z-index': '-100'}176 );
+			$('#wrap').hide("explode", {}, 2500);
+			$('#winner').hide("explode", {}, 2500);
 		}
 
 		if (game.score.yours > 4)
 		{
-			$('#wrap').addClass('hide');
-			$('#winner').css({'visibility': 'hidden', 'z-index': '-100'});
+			$('#wrap').hide("explode", {}, 2500);
+			$('#winner').hide("explode", {}, 2500);
 		}
 
 	});
@@ -101,6 +101,9 @@ $(document).ready(function () {
 				dataType: 'json',
 				success: result
 			}); 
+
+			$('#yours .data').delay(2000).hide("explode", {}, 2500);
+			$('#yours .image').delay(2000).hide("explode", {}, 2500);
 
 			//result({mine:1, yours:0, lastWinner:'mine'});
 
