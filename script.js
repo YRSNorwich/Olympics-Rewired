@@ -67,17 +67,17 @@ $(document).ready(function () {
 		$('p.resulta').html(game.score.mine);
 		$('p.resultb').html(game.score.yours);
 
-		/*if (game.score.mine > 4)
+		if (game.score.mine > 4)
 		{
-			$('#wrap').hide("explode", {}, 2500);
-			$('#winner').hide("explode", {}, 2500);
+			$('#wrap').hide(500);
+			$('#winner').hide(500);
 		}
 
 		if (game.score.yours > 4)
 		{
-			$('#wrap').hide("explode", {}, 2500);
-			$('#winner').hide("explode", {}, 2500);
-		}*/
+			$('#wrap').hide(500);
+			$('#winner').hide(500);
+		}
 
 	});
 
@@ -98,7 +98,6 @@ $(document).ready(function () {
 				async: false,
 				dataType: 'json',
 				success: function(data){
-					debugger;
 					game.score = data;
 					game.trigger('scoreUpdated');
 					if(game.score.lastWinner && game.score.lastWinner === 'mine')
