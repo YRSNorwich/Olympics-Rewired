@@ -8,6 +8,6 @@ if (empty($host)) {
     $host = 'localhost';
     $user = 'root';
     $pass = '';
-    $dbname = 'trump';
+    $dbname = 'withco2';
 }
 ?>
