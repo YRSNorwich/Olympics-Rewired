@@ -67,9 +67,16 @@ $(document).ready(function () {
 		$('p.resulta').html(game.score.mine);
 		$('p.resultb').html(game.score.yours);
 
-		if (game.score.mine <= 6  || game.score.yours <= 6)
+		if (game.score.mine > 4)
 		{
-			$('#wrap').addClass('hide1');
+			$('#wrap').addClass('hide');
+			$('#loser').css('visibility': 'hidden;', 'z-index': '-100');
+		}
+
+		if (game.score.yours > 4)
+		{
+			$('#wrap').addClass('hide');
+			$('#winner').css({'visibility': 'hidden', 'z-index': '-100');
 		}
 
 	});
@@ -88,7 +95,7 @@ $(document).ready(function () {
 				game.trigger('scoreUpdated');
 			}
 
-			 $.ajax({
+			$.ajax({
 				url:'./php/comparecards.php', 
 				data: table,
 				dataType: 'json',
