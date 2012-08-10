@@ -2,7 +2,7 @@
 header('content-type: application/json');
 session_start();
 if (!isset($_SESSION['score'])) {
-    $_SESSION['score'] = array();
+    $_SESSION['score'] = array('mine' => 0, 'yours' => 0);
 }
 
 $compare = $_GET['chosenProperty'];
