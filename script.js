@@ -70,7 +70,7 @@ $(document).ready(function () {
 		if (game.score.mine > 4)
 		{
 			$('#wrap').addClass('hide');
-			$('#loser').css({'visibility': 'hidden;', 'z-index': '-100'});
+			$('#loser').css({'visibility': 'hidden;', 'z-index': '-100'}176 );
 		}
 
 		if (game.score.yours > 4)
