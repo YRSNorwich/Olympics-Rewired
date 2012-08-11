@@ -106,16 +106,16 @@ $(document).ready(function () {
 					game.trigger('scoreUpdated');
 					if(game.score.lastWinner && game.score.lastWinner === 'mine')
 					{
-						$('.scroll').text('YOU WON!')
+						$('.scroll').text('YOU WON!').delay(1500).fadeOut();
 					}
 
 					if(game.score.lastWinner && game.score.lastWinner === 'yours')
 					{
-						$('.scroll').text('You lost :-(')
+						$('.scroll').text('You lost :-(').delay(1500).fadeOut();
 					}
-					$('#yours').delay(1750).hide(2500, function(){
+					$('#yours').delay(1000).hide(1000, function(){
 						play('mine');
-						$('.scroll').text('Pick a stat to compare!');
+						$('.scroll').text('Pick a stat to compare!').delay(500).fadeIn();
 					});
 				}
 			}); 
