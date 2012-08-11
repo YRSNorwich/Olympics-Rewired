@@ -98,6 +98,8 @@ $(document).ready(function () {
 			play('yours');
 			$('#yours').show(500);
 
+            $('.bullet').hide();
+
 			$.ajax({
 				url:'./php/comparecards.php', 
 				data: table,
@@ -917,8 +919,8 @@ $(document).ready(function () {
         "id": "74",
         "1": "kp",
         "country_code": "kp",
-        "2": "Democratic People's Republic of Korea",
-        "country_name": "Democratic People's Republic of Korea",
+        "2": "North Korea",
+        "country_name": "North Korea",
         "3": "4",
         "medals_gold": "4",
         "4": "0",
