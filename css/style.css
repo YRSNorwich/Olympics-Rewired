@@ -8,7 +8,7 @@ Josh & Ben & Dan
 body {
 	font:1em ;
 	font-family: 'Source Sans Pro', sans-serif;
-	background:#DAEDE2;xw
+	background:#DAEDE2;
 }
 
 a {color:#000; text-decoration:none;}
@@ -159,7 +159,7 @@ footer {
 	/*background-color: #000;*/
 } 
 
-img.menu	{width:360px;height:300px;}
+img.menu	{width:360px;height:300px;margin-top:-3px;}
 
 section.title	{
 	text-align:center;
@@ -353,6 +353,10 @@ p.resultb	{
 	position:absolute;
 	font-weight:700;
 	font-size:20px;
+}
+
+#tweet {
+	margin-top:20px;
 }
 
 /* Background */

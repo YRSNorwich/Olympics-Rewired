@@ -1,4 +1,4 @@
-var HAND_SIZE = 5,
+var HAND_SIZE = 20,
 	hands = {mine:[], yours:[]},
 	table = {mine:null, yours:null},
 	game = $({});
@@ -41,7 +41,7 @@ function play(player) {
 }
 
 $(document).ready(function () {
-	$('.resulting').hide();
+	$('#resulting').hide();
 
 	game.bind('dealCompleted', function(){
 		play('mine');
@@ -69,20 +69,22 @@ $(document).ready(function () {
 		$('p.resulta').html(game.score.mine);
 		$('p.resultb').html(game.score.yours);
 
-		if (game.score.mine > 5)
+		if (game.score.mine === 5)
 		{
 			$('#wrap').hide(500);
 			$('#winner').hide(500);
 			$('.scroll').hide(300);
-			$('.resulting').show(500);
+            $('#scroller').hide(250);
+			$('#resulting').show(500);
 		}
 
-		if (game.score.yours > 5)
+		if (game.score.yours === 5)
 		{
 			$('#wrap').hide(500);
 			$('#winner').hide(500);
 			$('.scroll').hide(300);
-			$('.resulting').show(500).css({'background-color':'#E63030'}).text('You Lost...');
+            $('#scroller').hide(250);
+			$('#resulting').show(500).css({'background-color':'#E63030'}).text('You Lost...');
 		}
 
 	});
@@ -1295,8 +1297,8 @@ $(document).ready(function () {
         "id": "64",
         "1": "cn",
         "country_code": "cn",
-        "2": "People's Republic of China",
-        "country_name": "People's Republic of China",
+        "2": "Peoples Republic of China",
+        "country_name": "Peoples Republic of China",
         "3": "31",
         "medals_gold": "31",
         "4": "17",
@@ -1309,26 +1311,6 @@ $(document).ready(function () {
         "military_personnel": "218500",
         "8": "1",
         "carbon_rank": "1"
-    },
-    {
-        "0": "123",
-        "id": "123",
-        "1": "uz",
-        "country_code": "uz",
-        "2": "Uzbekistan",
-        "country_name": "Uzbekistan",
-        "3": "0",
-        "medals_gold": "0",
-        "4": "0",
-        "medals_silver": "0",
-        "5": "1",
-        "medals_bronze": "1",
-        "6": "51",
-        "endangered_species": "51",
-        "7": "67000",
-        "military_personnel": "67000",
-        "8": "36",
-        "carbon_rank": "36"
     }
 ]);
 
