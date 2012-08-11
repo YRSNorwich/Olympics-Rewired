@@ -86,7 +86,6 @@ $(document).ready(function () {
             $('#scroller').hide(250);
 			$('#resulting').show(500).css({'background-color':'#E63030'}).text('You Lost...');
 		}
-
 	});
 
 	$('body').delegate('#mine .data li', 'click', function(evt){
