@@ -69,7 +69,7 @@ $(document).ready(function () {
 		$('p.resulta').html(game.score.mine);
 		$('p.resultb').html(game.score.yours);
 
-		if (game.score.mine === 5)
+		if (game.score.mine > 5)
 		{
 			$('#wrap').hide(500);
 			$('#winner').hide(500);
@@ -78,13 +78,13 @@ $(document).ready(function () {
 			$('#resulting').show(500);
 		}
 
-		if (game.score.yours === 5)
+		if (game.score.yours > 5)
 		{
 			$('#wrap').hide(500);
 			$('#winner').hide(500);
 			$('.scroll').hide(300);
             $('#scroller').hide(250);
-			$('#resulting').show(500).css({'background-color':'#E63030'}).text('You Lost...');
+			$('#resulting').show(500).addClass('reslos').text('You Lost...');
 		}
 	});
 
